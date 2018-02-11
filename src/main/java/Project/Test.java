@@ -1,5 +1,7 @@
 package Project;
 
+import Project.Metrics.MetricsCPU.MetricsCPU;
+
 /**
  * 1. Реализовать много поточность.
  * 2. Переключение между потоками.
@@ -13,6 +15,9 @@ public class Test {
     private int lenght = 100;
 
     public static void main(String[] args) {
+
+        MetricsCPU testt = new MetricsCPU();
+        testt.get();
         Test test = new Test();
         System.out.println(test.lenght);
 
