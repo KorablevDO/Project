@@ -7,6 +7,7 @@ import java.util.Properties;
 
 
 
+
 //import org.runtimemonitoring.tracing.ITracer;
 
 /**
@@ -26,6 +27,12 @@ import java.util.Properties;
  https://docs.oracle.com/javase/7/docs/technotes/guides/management/
 
  https://github.com/richardfriedman/bluecode/blob/master/java/plugins/src/org/blue/star/plugins/check_cpu.java
+
+ https://sourceforge.net/projects/sigar/
+
+ http://itech-notes.blogspot.ru/2012/08/hyperic-sigar-java.html
+
+ http://qaru.site/questions/315656/cpu-load-from-java
 
  java API System Monitor
 
