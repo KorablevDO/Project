@@ -1,0 +1,7 @@
+https://devcolibri.com/spring-data-jpa-работа-с-бд-часть-1/
+
+https://devcolibri.com/spring-data-jpa-пишем-dao-и-services-часть-2/
+
+https://www.youtube.com/watch?v=nwM7A4TwU3M
+
+https://habrahabr.ru/post/257223/

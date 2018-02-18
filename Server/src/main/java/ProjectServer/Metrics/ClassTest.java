@@ -1,4 +1,4 @@
-package Project.Metrics;
+package ProjectServer.Metrics;
 
 
 public class ClassTest {

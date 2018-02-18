@@ -1,4 +1,4 @@
-package Project.Metrics.MetricsCPU;
+package ProjectServer.Metrics.MetricsCPU;
 
 import java.lang.management.ManagementFactory;
 import java.lang.management.OperatingSystemMXBean;
