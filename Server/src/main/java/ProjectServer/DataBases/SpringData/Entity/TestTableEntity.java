@@ -1,4 +1,4 @@
-package ProjectServer.SpringData.Entity;
+package ProjectServer.DataBases.SpringData.Entity;
 
 import javax.persistence.*;
 
