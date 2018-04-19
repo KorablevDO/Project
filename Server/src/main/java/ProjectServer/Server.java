@@ -6,12 +6,7 @@ import java.io.IOException;
 import java.net.ServerSocket;
 import java.net.Socket;
 
-/**
- * https://habrahabr.ru/post/330676/
- * https://habrahabr.ru/post/209144/
- * http://javatutor.net/books/tiej/socket
- * https://tproger.ru/
- */
+
 public class Server {
     public void run() throws IOException, InterruptedException {
         ServerSocket serverSocket = new ServerSocket(3345);

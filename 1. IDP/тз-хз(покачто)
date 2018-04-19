@@ -3,3 +3,72 @@
 3. что такое java utils
 4. Hibernate ?
 5.
+
+    /**
+     * Расмотреть:
+     * 1. Получение системных метрик.
+     * 2. Клиент - сервер - клиент.
+     * 3. Big Data.
+     * 4. Работа с базой данных.
+     * 5. Много поточность.
+     * 6. Паттерны проектирования.
+     */
+
+    /**
+     * Тз.
+     * 1. Реализовать много поточное разделение на процессы.
+     * 2. Реализовать Интерфейс.
+     * 3. Реализовать настройки.
+     * 4.
+     */
+
+     https://devcolibri.com/spring-data-jpa-работа-с-бд-часть-1/
+
+     https://devcolibri.com/spring-data-jpa-пишем-dao-и-services-часть-2/
+
+     https://www.youtube.com/watch?v=nwM7A4TwU3M
+
+     https://habrahabr.ru/post/257223/
+
+     /**
+      *
+      https://stackoverflow.com/questions/25552/get-os-level-system-information#25583
+
+      http://nadeausoftware.com/articles/2008/03/java_tip_how_get_cpu_and_user_time_benchmarking#UsingaSuninternalclasstogetJVMCPUtime
+
+      https://stackoverflow.com/questions/47177/how-do-i-monitor-the-computers-cpu-memory-and-disk-usage-in-java
+
+      https://www.javaworld.com/article/2073044/java-se/access-windows-performance-monitor-counters-from-java--part-1.html
+
+      https://www.javaworld.com/article/2072116/java-se/access-windows-performance-monitor-counters-from-java--part-2.html
+
+      https://www.ibm.com/developerworks/ru/library/j-rtm3/index.html
+
+      https://docs.oracle.com/javase/7/docs/technotes/guides/management/
+
+      https://github.com/richardfriedman/bluecode/blob/master/java/plugins/src/org/blue/star/plugins/check_cpu.java
+
+      https://sourceforge.net/projects/sigar/
+
+      http://itech-notes.blogspot.ru/2012/08/hyperic-sigar-java.html
+
+      http://qaru.site/questions/315656/cpu-load-from-java
+
+      java API System Monitor
+
+      String getOS = System.getenv("OS");
+      */
+
+      /**
+       * https://habrahabr.ru/post/330676/
+       * https://habrahabr.ru/post/209144/
+       * http://javatutor.net/books/tiej/socket
+       * https://tproger.ru/
+       */
+
+               /**
+                * 1. логгирование через log4j
+                * 2. сборка обекта черезе lombok
+                * 3. покрытие тестами через фреймворк TestNG
+                * 4. сборка объектов по xml через JAXBContext
+                */
