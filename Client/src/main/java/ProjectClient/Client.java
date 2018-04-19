@@ -7,6 +7,7 @@ import java.io.IOException;
 import java.net.Socket;
 
 public class Client {
+
     public void run() throws IOException, InterruptedException {
         Socket socket = new Socket("localhost", 3345);//todo что такое сокет и как он работает
         DataOutputStream out = new DataOutputStream(socket.getOutputStream());

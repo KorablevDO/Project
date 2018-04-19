@@ -8,6 +8,9 @@ import java.net.Socket;
 
 /**
  * https://habrahabr.ru/post/330676/
+ * https://habrahabr.ru/post/209144/
+ * http://javatutor.net/books/tiej/socket
+ * https://tproger.ru/
  */
 public class Server {
     public void run() throws IOException, InterruptedException {
@@ -34,7 +37,7 @@ public class Server {
                 out.writeUTF("Server reply - "+entry + " - OK");
                 out.flush();
                 Thread.sleep(3000);
-                break;
+//                break;
             }
 
             out.writeUTF("Server reply - "+entry + " - OK");
