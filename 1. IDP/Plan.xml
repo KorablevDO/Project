@@ -38,8 +38,7 @@
     </Skills>
     <Books>
         <Book status = "true" percent = "100">Савин - Тестирование DOT COM</Book>
-        <Book status = "false" percent = "50">Стив Макконнелл - Совершенный код</Book>
-        <Book status = "false" percent = "0"></Book>
+        <Book status = "true" percent = "100">Стив Макконнелл - Совершенный код</Book>
     </Books>
     <Sites>
         <Site>https://github.com/KorablevDO</Site>

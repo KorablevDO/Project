@@ -1,0 +1,19 @@
+<?xml version="0.0" encoding="utf-8"?>
+<Project>
+    <Website>
+        <site category = "null" info = "null">null</site>
+    </Website>
+    <Tools>
+        <tool used = "false">логгирование через log4j</tool>
+        <tool used = "false">сборка обекта черезе lombok</tool>
+        <tool used = "false">покрытие тестами через фреймворк TestNG</tool>
+        <tool used = "false">сборка объектов по xml через JAXBContext</tool>
+        <tool used = "false">Socket UDP</tool>
+    </Tools>
+    <Server>
+        <TODO>null</TODO>
+    </Server>
+    <Client>
+        <TODO>null</TODO>
+    </Client>
+</Project>
