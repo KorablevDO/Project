@@ -42,6 +42,20 @@
             <artifactId>spring-boot-starter-web</artifactId>
             <version>1.4.2.RELEASE</version>
         </dependency>
+
+        <!--TestNG-->
+        <dependency>
+            <groupId>org.testng</groupId>
+            <artifactId>testng</artifactId>
+            <version>6.8</version>
+        </dependency>
+
+        <!--Spring framework-->
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-context</artifactId>
+            <version>4.1.6.RELEASE</version>
+        </dependency>
     </dependencies>
 
 </project>

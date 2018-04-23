@@ -3,8 +3,8 @@ package ProjectServer;
 import java.io.IOException;
 
 public class RunServer {
-    public static void main(String[] args) throws InterruptedException, IOException {
-            Server server = new Server();
+    public static void main(String[] args) throws InterruptedException, IOException, ClassNotFoundException {
+            ServerUDP server = new ServerUDP();
             server.run();
 //        SpringApplication.run(new Class<?>[] {Application.class, DataConfig.class}, args);
 //        for(int i = 0; i < 1000000; i++){

@@ -4,7 +4,7 @@ import java.io.IOException;
 
 public class RunClient {
     public static void main(String[] args) throws IOException, InterruptedException {
-        Client client = new Client();
+        ClientUDP client = new ClientUDP();
         client.run();
     }
 }
