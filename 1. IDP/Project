@@ -1,7 +1,8 @@
 <?xml version="0.0" encoding="utf-8"?>
 <Project>
     <Website>
-        <site category = "null" info = "null">null</site>
+        <site category = "DB" info = "Spring data">https://devcolibri.com/spring-data-jpa-работа-с-бд-часть-1/</site>
+        <site category = "DB" info = "Spring data">https://devcolibri.com/spring-data-jpa-пишем-dao-и-services-часть-2/</site>
     </Website>
     <Tools>
         <tool used = "false">логгирование через log4j</tool>
@@ -9,11 +10,15 @@
         <tool used = "false">покрытие тестами через фреймворк TestNG</tool>
         <tool used = "false">сборка объектов по xml через JAXBContext</tool>
         <tool used = "false">Socket UDP</tool>
+        <tool used = "false">Spring data</tool>
+        <tool used = "false">Hibernate</tool>
     </Tools>
     <Server>
-        <TODO>null</TODO>
+
     </Server>
     <Client>
-        <TODO>null</TODO>
+
     </Client>
+
+
 </Project>
