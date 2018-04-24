@@ -1,5 +1,7 @@
 package ProjectClient;
 
+import library.utils.Object.Message;
+
 import java.io.ByteArrayOutputStream;
 import java.io.IOException;
 import java.io.ObjectOutputStream;
