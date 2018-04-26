@@ -43,6 +43,8 @@
     <Sites>
         <Site>https://github.com/KorablevDO</Site>
         <Site>https://hh.ru/article/301417?utm_campaign=misc_app_article301417_050917&utm_medium=email&utm_source=email</Site>
+        <Site>https://habrahabr.ru/post/350682/</Site>
+        <Site>https://tproger.ru/</Site>
     </Sites>
     <PlanForTheDay>
         <Task status = "false" frequency = "">Работа с xml</Task>

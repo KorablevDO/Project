@@ -1,0 +1,36 @@
+<?xml version="0.0" encoding="utf-8"?>
+<Project>
+    <Website>
+        <site category = "DB" info = "Spring data">https://devcolibri.com/spring-data-jpa-работа-с-бд-часть-1/</site>
+        <site category = "DB" info = "Spring data">https://devcolibri.com/spring-data-jpa-пишем-dao-и-services-часть-2/</site>
+        <site category = "framework" info = "Spring data">http://spring-projects.ru/projects/</site>
+        <site category = "socket" info = "socket">http://javatutor.net/books/tiej/socket</site>
+        <site category = "socket" info = "UDP">https://habrahabr.ru/post/209144/</site>
+        <site category = "socket" info = "multithreading">https://habrahabr.ru/post/330676/</site>
+    </Website>
+    <Tools>
+        <tool used = "true">логгирование через log4j</tool>
+        <tool used = "false">сборка обекта черезе lombok</tool>
+        <tool used = "false">покрытие тестами через фреймворк TestNG</tool>
+        <tool used = "false">сборка объектов по xml через JAXBContext</tool>
+        <tool used = "false">Socket UDP</tool>
+        <tool used = "false">Spring data</tool>
+        <tool used = "false">Hibernate</tool>
+    </Tools>
+    <Server>
+        <Add status = "true">Пересылка сообщения между клиентом и сервером</Add>
+        <Add status = "false">Ограничене на 4-х клиентов</Add>
+        <Add status = "false">Запуск отдельного потока который по таймеру выкидывает показания по java mashin или ченить интересное показывая что он жив</Add>
+        <Add status = "true">Вывод лога в файл</Add>
+        <Add status = "false">Переделать подключения к проекту "Library"</Add>
+        <Add status = "false">Покрытие тестами</Add>
+        <Add status = "false">Работа с базой данных</Add>
+        <Add status = "false">Много поточность</Add>
+        <Add status = "false">Паттерны проектирования</Add>
+    </Server>
+    <Client>
+        <Add status = "false"></Add>
+    </Client>
+
+
+</Project>

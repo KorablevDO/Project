@@ -10,10 +10,10 @@ import java.net.DatagramSocket;
 import java.net.InetAddress;
 
 public class ClientUDP {
-    public void run() throws IOException {
+    public void run(String messageTo) throws IOException, InterruptedException {
         DatagramSocket clientSocket = new DatagramSocket();
         Message message = new Message();
-        message.message = "end";
+        message.message = messageTo;
         ByteArrayOutputStream outputStream = new ByteArrayOutputStream();
         ObjectOutputStream out = new ObjectOutputStream(outputStream);
         out.writeObject(message);
@@ -29,7 +29,7 @@ public class ClientUDP {
                     3310);
             clientSocket.send(packet);
             System.out.println("отправил");
-            break;
+            Thread.sleep(1000);
         }
     }
 }

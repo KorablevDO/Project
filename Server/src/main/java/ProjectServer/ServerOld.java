@@ -7,7 +7,7 @@ import java.net.ServerSocket;
 import java.net.Socket;
 
 
-public class Server {
+public class ServerOld {
     public void run() throws IOException, InterruptedException {
         ServerSocket serverSocket = new ServerSocket(3345);
         Socket clientSocket = serverSocket.accept();
@@ -21,22 +21,22 @@ public class Server {
         System.out.println("DataInputStream created");
 
         while (!clientSocket.isClosed()){
-            System.out.println("Server reading from channel");
+            System.out.println("ServerOld reading from channel");
 
             String entry = in.readUTF();
             System.out.println("READ from client message - "+entry);
-            System.out.println("Server try writing to channel");
+            System.out.println("ServerOld try writing to channel");
 
             if(entry.equalsIgnoreCase("quit")){
                 System.out.println("Client initialize connections suicide ...");
-                out.writeUTF("Server reply - "+entry + " - OK");
+                out.writeUTF("ServerOld reply - "+entry + " - OK");
                 out.flush();
                 Thread.sleep(3000);
 //                break;
             }
 
-            out.writeUTF("Server reply - "+entry + " - OK");
-            System.out.println("Server Wrote message to client.");
+            out.writeUTF("ServerOld reply - "+entry + " - OK");
+            System.out.println("ServerOld Wrote message to client.");
 
             out.flush();
         }
