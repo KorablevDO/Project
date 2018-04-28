@@ -15,6 +15,7 @@ public class ServerUDP {
         byte[] messageBuffer = new byte[1024];
         DatagramPacket packet = new DatagramPacket(messageBuffer, messageBuffer.length);
 
+
         System.out.println("Ожидаем данные...");
 
         while (true){
@@ -42,3 +43,9 @@ public class ServerUDP {
         }
     }
 }
+/**
+ * UDP - выстрелили и забыл.
+ * Как может быть реализована работа ?
+ * Организовать поток в котором сруца сообщения и потом я выдергиваю из коллекции сообщения,
+ * обрабатываю и выплеввываю сообщение обратно.
+ */
