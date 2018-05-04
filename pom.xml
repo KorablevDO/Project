@@ -13,6 +13,7 @@
         <module>Server</module>
         <module>Client</module>
         <module>Library</module>
+        <module>Spring</module>
     </modules>
 
     <dependencies>
@@ -68,7 +69,7 @@
         <dependency>
             <groupId>org.springframework</groupId>
             <artifactId>spring-context</artifactId>
-            <version>4.1.6.RELEASE</version>
+            <version>5.0.5.RELEASE</version>
         </dependency>
     </dependencies>
 
