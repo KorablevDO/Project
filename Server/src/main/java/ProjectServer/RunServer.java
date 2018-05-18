@@ -7,6 +7,7 @@ import java.io.IOException;
 
 public class RunServer {
     private static final Logger log = LogManager.getLogger(RunServer.class);
+    private static ServerSession serverSession;
 
     public static void main(String[] args) throws InterruptedException, IOException, ClassNotFoundException {
         outInfoMessage();
@@ -20,15 +21,22 @@ public class RunServer {
     }
 
     private static void init(){
-
+        serverSession = new UDPServerSession(new ServerSettings());
+        serverSession.openSession();
     }
 
     private static void action() throws IOException, ClassNotFoundException {
-        ServerUDP server = new ServerUDP();
-        server.run();
+        serverSession.getMessage();
+        serverSession.setMessage();
+
+        try {
+            Thread.sleep(60000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
     }
 
     private static void end(){
-
+        serverSession.close();
     }
 }

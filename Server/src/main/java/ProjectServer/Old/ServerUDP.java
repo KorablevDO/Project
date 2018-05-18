@@ -1,4 +1,4 @@
-package ProjectServer;
+package ProjectServer.Old;
 
 import library.utils.Object.Message;
 
@@ -31,11 +31,11 @@ public class ServerUDP {
             System.out.println(message.message);
 
             //отправляем данные
-//            DatagramPacket outMessage = new DatagramPacket(message.message.getBytes(),
-//                    message.message.length(),
-//                    packet.getAddress(),
-//                    packet.getPort());
-//            serverSocket.send(outMessage);
+            DatagramPacket outMessage = new DatagramPacket(message.message.getBytes(),
+                    message.message.length(),
+                    packet.getAddress(),
+                    packet.getPort());
+            serverSocket.send(outMessage);
 
             if(message.message.equals("end")){
                 break;

@@ -2,7 +2,7 @@
 <Plan>
     <Direction>
         <Basic>Нагрузочное тестирование</Basic>
-        <UnderDirection>разработка Back-End</UnderDirection>
+        <UnderDirection>Разработка Back-End</UnderDirection>
         <UnderDirection>Автоматизация</UnderDirection>
         <Strategy>
             Сделать упор на навыках необходимых сейчас или в ближайшей приспективе.
@@ -46,14 +46,6 @@
         <Site>https://habrahabr.ru/post/350682/</Site>
         <Site>https://tproger.ru/</Site>
     </Sites>
-    <PlanForTheDay>
-        <Task status = "false" frequency = "">Работа с xml</Task>
-        <Task status = "false" frequency = "">Подключение классов или аналог дествий</Task>
-        <Task status = "false" frequency = "">Подключение к бд</Task>
-        <Task status = "false" frequency = "">Машина</Task>
-        <Task status = "false" frequency = "">Работоа с файлами в многопоточности</Task>
-        <Task status = "false" frequency = "">Работа с большими данными</Task>
-    </PlanForTheDay>
     <Chronophags>
         <Chronophagus>Дорога на работу и назад</Chronophagus>
         <Chronophagus>Игры</Chronophagus>

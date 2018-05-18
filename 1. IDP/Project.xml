@@ -16,6 +16,7 @@
         <tool used = "false">Socket UDP</tool>
         <tool used = "false">Spring data</tool>
         <tool used = "false">Hibernate</tool>
+        <tool used = "false">REST</tool>
     </Tools>
     <Server>
         <Add status = "true">Пересылка сообщения между клиентом и сервером</Add>
