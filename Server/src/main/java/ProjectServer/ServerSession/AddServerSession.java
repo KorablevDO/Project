@@ -1,4 +1,6 @@
-package ProjectServer;
+package ProjectServer.ServerSession;
+
+import ProjectServer.ServerSession.ServerSession;
 
 abstract class AddServerSession implements ServerSession {
     protected ServerSettings serverSettings;

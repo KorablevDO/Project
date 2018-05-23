@@ -1,6 +1,6 @@
 package TestPlan;
 
-import ProjectServer.ClassZ;
+import ProjectServer.Old.ClassZ;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 

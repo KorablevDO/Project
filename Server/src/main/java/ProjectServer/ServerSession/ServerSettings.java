@@ -1,7 +1,7 @@
-package ProjectServer;
+package ProjectServer.ServerSession;
 
 public class ServerSettings {
-    private int port;
+    private int port = 3310;
 
     public int getPort(){
         return this.port;
