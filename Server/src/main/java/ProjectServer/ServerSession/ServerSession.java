@@ -1,8 +1,9 @@
 package ProjectServer.ServerSession;
 
 public interface ServerSession {
-    public void getMessages();
-    public void setMessages();
+    public void setServerSettings(ServerSettings serverSettings);
+    public void readMessages();
+    public void dispatchMessages();
     public void openSession();
     public void close();
 }
