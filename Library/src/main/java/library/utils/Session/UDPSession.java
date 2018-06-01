@@ -33,6 +33,8 @@ public class UDPSession {
     }
 
     public void close(){
-        this.datagramSocket.close();
+        if(this.datagramSocket != null) {
+            this.datagramSocket.close();
+        }
     }
 }

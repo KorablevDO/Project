@@ -4,30 +4,15 @@ import library.utils.Message.TestMessageCode;
 import library.utils.Session.UDPSession;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Component;
 
 import java.net.SocketException;
 
-@Component
 public class UDPServerSession implements ServerSession {
     private static final Logger log = LogManager.getLogger(UDPServerSession.class);
     private UDPSession udpSession;
-    private int port;
 
     //TODO реализовать буффер сообщений
     //TODO через спринг реализовать подключение модуля сообщение где идет реализация сообщения
-    public UDPServerSession(){
-    }
-
-    @Autowired
-    public UDPServerSession(ServerSettings serverSettings){
-        this.port = serverSettings.getPort();
-    }
-
-    public void setServerSettings(ServerSettings serverSettings) {
-        this.port = serverSettings.getPort();
-    }
 
     public void readMessages() {
         log.info("Open stream read message.");
@@ -49,11 +34,11 @@ public class UDPServerSession implements ServerSession {
         }
     }
 
-    public void openSession() {
+    public void openSession(int port) {
         log.info("Open session");
         try {
-            this.udpSession = UDPSession.get(this.port);
-            log.info("Open session, port: " + this.port);
+            this.udpSession = UDPSession.get(port);
+            log.info("Open session, port: " + port);
         } catch (SocketException e) {
             log.error(e.toString());
         } catch (NullPointerException e) {
