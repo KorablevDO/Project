@@ -5,9 +5,12 @@ import org.apache.logging.log4j.Logger;
 
 import java.nio.charset.StandardCharsets;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 import java.util.Optional;
 import java.util.Random;
+import java.util.stream.IntStream;
+import java.util.stream.Stream;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
@@ -49,6 +52,27 @@ public class TasksDataStreams {
 
     private String convert(String str){
         return new String(str.getBytes(), StandardCharsets.UTF_8);
+    }
+
+    private int[] getArrayInt(int size){
+        int[] ints = new int[size];
+
+        for(int i: ints){
+            i = random.nextInt(size);
+        }
+
+        return ints;
+    }
+
+    public IntStream getStreamIntOfArrays(int size){
+        int[] value = getArrayInt(size);
+        IntStream intStream = Arrays.stream(value);
+        return intStream;
+    }
+
+    public Stream<Integer> getStreamIntOfList(int size){
+        List<Integer> list = getList(size);
+        return list.stream();
     }
 
     public List<String> runFor(List<String> list){

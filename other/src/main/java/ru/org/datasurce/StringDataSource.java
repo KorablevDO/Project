@@ -4,6 +4,7 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 import java.util.Random;
 
@@ -44,5 +45,9 @@ public class StringDataSource {
     private String getSymbol() {
         char rc = (char) ('A' + new Random().nextInt(26));
         return String.valueOf(rc);
+    }
+
+    public List<String> getLisStringWitchRepeating(){
+        return Arrays.asList("qazwsx", "qaz","qaz","qazwsx","qazwsx","edcwsx","edcwsx","edcwsx","rfv");
     }
 }
