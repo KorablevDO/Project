@@ -3,6 +3,7 @@ package ru.org.tasks;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
+import javax.xml.crypto.Data;
 import java.nio.charset.StandardCharsets;
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -59,14 +60,24 @@ public class TasksDataStreams {
 
     public void getFirstFiveBigWords(List<String> list, int sizeBigWord) {
         list.stream().filter(str -> {
-            if(str.length() >= sizeBigWord){
+            if (str.length() >= sizeBigWord) {
                 System.out.println(str);
                 return true;
             } else {
                 return false;
             }
-            }).limit(5).count();
+        }).limit(5).count();
     }
 
+    public void parallelStreamFilter(List<String> list, int sizeBigWord) {
+        LOGGER.info("Start parallelStream " + System.currentTimeMillis());
+        Stream<String> parallel = list.parallelStream().filter(s -> s.length() > sizeBigWord);
+        LOGGER.info("Stop parallelStream " + System.currentTimeMillis());
+    }
 
+    public void streamFilter(List<String> list, int sizeBigWord) {
+        LOGGER.info("Start stream " + System.currentTimeMillis());
+        Stream<String> stream = list.stream().filter(s -> s.length() > sizeBigWord);
+        LOGGER.info("Stop stream " + System.currentTimeMillis());
+    }
 }

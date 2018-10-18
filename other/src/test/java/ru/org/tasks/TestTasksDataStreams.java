@@ -27,7 +27,7 @@ public class TestTasksDataStreams {
         List<String> list = StringDataSource.get().getListString(size, wordSize);
         STREAMS.getFirstFiveBigWords(list, wordSize);
         /**
-         * help! - смог реализовать вывод в конслоь, но реализоация не подтвержает утверждениеиз задачи.
+         * help! - смог реализовать вывод в конслоь, но реализоация не подтвержает утверждениеие задачи.
          */
     }
 
@@ -38,12 +38,19 @@ public class TestTasksDataStreams {
             компьютер, выберите для подсчета длинных слов более длинный документ (например,
             роман "Война и мир").
      */
+    @Test
     public void comparisonParallelStreamAndStream(){
-        int size = 188088;
+        int size = warAndPeace * 5;
         int wordSize = 10;
-        List<String> list = StringDataSource.get().getListString(size, wordSize);;
+        int bigWordSize = 8;
+        List<String> list1 = StringDataSource.get().getListString(size, wordSize);
+        STREAMS.parallelStreamFilter(list1, bigWordSize);
+        List<String> list2 = StringDataSource.get().getListString(size, wordSize);
+        STREAMS.streamFilter(list2, bigWordSize);
 
-
+        /**
+         * По итогам моих наблюдений stream отрабатывает быстрее чем parallelStream.
+         */
     }
 
     /**
