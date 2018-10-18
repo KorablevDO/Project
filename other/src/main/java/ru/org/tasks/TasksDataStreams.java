@@ -17,72 +17,28 @@ import java.util.stream.Stream;
 public class TasksDataStreams {
     private static final Logger LOGGER = LogManager.getLogger(TasksDataStreams.class);
 
-    public List<Integer> getList(int size){
+    public List<Integer> getList(int size) {
         List<Integer> list = new ArrayList<Integer>();
         Random random = new Random();
-        for(int i = 0; i < size; i++){
-            list.add( random.nextInt(size));
+        for (int i = 0; i < size; i++) {
+            list.add(random.nextInt(size));
         }
         return list;
     }
 
-    private Random random = new Random();
-
-
-    public List<String> getDataString(int size){
-        List<String> list = new ArrayList<>();
-        int max = 10;
-        for(int i = 0; i < size; i++){
-            String str = convert(getRandomStr(this.random.nextInt(max) + 1));
-            list.add(str);
-        }
-        return list;
-    }
-
-    private String getRandomStr(int size){
-        int ascMax = 79;
-        int ascMin = 41;
-        StringBuffer buffer = new StringBuffer();
-        for(int i = 0; i < size; i++){
-            String convert = Character.toString((char)(this.random.nextInt(ascMax) + ascMin));
-            buffer.append(convert);
-        }
-        return buffer.toString();
-    }
-
-    private String convert(String str){
-        return new String(str.getBytes(), StandardCharsets.UTF_8);
-    }
-
-    private int[] getArrayInt(int size){
-        int[] ints = new int[size];
-
-        for(int i: ints){
-            i = random.nextInt(size);
-        }
-
-        return ints;
-    }
-
-    public IntStream getStreamIntOfArrays(int size){
-        int[] value = getArrayInt(size);
-        IntStream intStream = Arrays.stream(value);
-        return intStream;
-    }
-
-    public Stream<Integer> getStreamIntOfList(int size){
+    public Stream<Integer> getStreamIntOfList(int size) {
         List<Integer> list = getList(size);
         return list.stream();
     }
 
-    public List<String> runFor(List<String> list){
+    public List<String> runFor(List<String> list) {
         list.sort(String.CASE_INSENSITIVE_ORDER);
         LOGGER.debug(list);
         List<String> result = new ArrayList<>();
 
-        for(int i = list.size() - 1; i > -1; i--){
+        for (int i = list.size() - 1; i > -1; i--) {
             result.add(list.get(i));
-            if(result.size() == 500){
+            if (result.size() == 500) {
                 break;
             }
         }
@@ -90,20 +46,26 @@ public class TasksDataStreams {
         return result;
     }
 
-    public List<String> runStream(List<String> list){
+    public List<String> runStream(List<String> list) {
         int max = 10;
         Stream<String> stream = list.parallelStream();
         return stream.sorted().filter(str -> str.length() == max).limit(500).collect(Collectors.toList());
     }
 
-    public List<String> distinct(List<String> list){
+    public List<String> distinct(List<String> list) {
         Stream<String> stream = list.stream();
         return stream.distinct().collect(Collectors.toList());
     }
 
-    public void protocol(List<String> list){
-        int max = 10;
-        Stream<String> stream = list.stream().filter(str -> str.length() == max);
+    public void getFirstFiveBigWords(List<String> list, int sizeBigWord) {
+        list.stream().filter(str -> {
+            if(str.length() >= sizeBigWord){
+                System.out.println(str);
+                return true;
+            } else {
+                return false;
+            }
+            }).limit(5).count();
     }
 
 

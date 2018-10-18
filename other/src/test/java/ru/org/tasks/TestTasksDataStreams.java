@@ -7,14 +7,12 @@ import ru.org.datasurce.StringDataSource;
 
 import java.util.Arrays;
 import java.util.List;
-import java.util.function.IntFunction;
-import java.util.stream.Collectors;
 import java.util.stream.IntStream;
 import java.util.stream.Stream;
 
 public class TestTasksDataStreams {
     private static final Logger LOGGER = LogManager.getLogger(TestTasksDataStreams.class);
-    private static final TasksDataStreams DATA_STREAMS = new TasksDataStreams();
+    private static final TasksDataStreams STREAMS = new TasksDataStreams();
     int warAndPeace = 2709701;
 
     /**
@@ -23,11 +21,14 @@ public class TestTasksDataStreams {
             протоколирование вызова каждого метода.
      */
     @Test
-    public void protocol(){
-        int i = 10;
-        List<String> list = DATA_STREAMS.getDataString(10);
-        LOGGER.info(list.toString());
-        DATA_STREAMS.protocol(list);
+    public void outFirstFiveBigWords(){
+        int size = 100;
+        int wordSize = 5;
+        List<String> list = StringDataSource.get().getListString(size, wordSize);
+        STREAMS.getFirstFiveBigWords(list, wordSize);
+        /**
+         * help! - смог реализовать вывод в конслоь, но реализоация не подтвержает утверждениеиз задачи.
+         */
     }
 
     /**
@@ -37,10 +38,11 @@ public class TestTasksDataStreams {
             компьютер, выберите для подсчета длинных слов более длинный документ (например,
             роман "Война и мир").
      */
-    public void comparison(){
-        int i = 188088;
-        List<String> list = DATA_STREAMS.getDataString(10);
-        LOGGER.info(list.toString());
+    public void comparisonParallelStreamAndStream(){
+        int size = 188088;
+        int wordSize = 10;
+        List<String> list = StringDataSource.get().getListString(size, wordSize);;
+
 
     }
 
@@ -53,8 +55,8 @@ public class TestTasksDataStreams {
         /**
          * Stream.of(values) - получил ошибку компилятора.
          */
-        Stream<Integer> stream = DATA_STREAMS.getStreamIntOfList(100);
-        IntStream intStream = DATA_STREAMS.getStreamIntOfArrays(100);
+        Stream<Integer> stream = STREAMS.getStreamIntOfList(100);
+        IntStream intStream = null;
     }
 
     /**
@@ -184,19 +186,19 @@ public class TestTasksDataStreams {
     @Test
     public void measuringTime(){
         int i = 188088;
-        List<String> list = DATA_STREAMS.getDataString(i);
+        List<String> list = null;
         LOGGER.info("Size = " + list.size());
 
         List<String> test = Arrays.asList("adffhfdh","fgsfhrtrtdgfg", "fhcfddt","sgfh","dfgsfhtrebcvdfhdfhs");
 
         LOGGER.info("Star For");
-        List<String> runFor = DATA_STREAMS.runFor(list);
+        List<String> runFor = STREAMS.runFor(list);
         LOGGER.info("Stop For");
         LOGGER.info("Size result = " + runFor.size());
         LOGGER.info(runFor);
 
         LOGGER.info("Star Stream");
-        List<String> runStream = DATA_STREAMS.runStream(list);
+        List<String> runStream = STREAMS.runStream(list);
         LOGGER.info("Stop Stream");
         LOGGER.info("Size result = " + runStream.size());
         LOGGER.info(runStream);
@@ -209,7 +211,7 @@ public class TestTasksDataStreams {
     public void distinct(){
         List<String> list = StringDataSource.get().getLisStringWitchRepeating();
         LOGGER.info(list);
-        List<String> distinct = DATA_STREAMS.distinct(list);
+        List<String> distinct = STREAMS.distinct(list);
         LOGGER.info(distinct);
 
         /**
