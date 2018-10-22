@@ -18,18 +18,9 @@ import java.util.stream.Stream;
 public class TasksDataStreams {
     private static final Logger LOGGER = LogManager.getLogger(TasksDataStreams.class);
 
-    public List<Integer> getList(int size) {
-        List<Integer> list = new ArrayList<Integer>();
-        Random random = new Random();
-        for (int i = 0; i < size; i++) {
-            list.add(random.nextInt(size));
-        }
-        return list;
-    }
-
-    public Stream<Integer> getStreamIntOfList(int size) {
-        List<Integer> list = getList(size);
-        return list.stream();
+    public Stream<Integer> getIntStream(int[] array) {
+        IntStream intStream = Arrays.stream(array);
+        return  (Stream<Integer>) Arrays.stream(array);
     }
 
     public List<String> runFor(List<String> list) {
@@ -79,5 +70,9 @@ public class TasksDataStreams {
         LOGGER.info("Start stream " + System.currentTimeMillis());
         Stream<String> stream = list.stream().filter(s -> s.length() > sizeBigWord);
         LOGGER.info("Stop stream " + System.currentTimeMillis());
+    }
+
+    public Stream<Long> getLongStream(long a, int c, int t){
+        return Stream.iterate(a,null);
     }
 }

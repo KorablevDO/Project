@@ -3,6 +3,7 @@ package ru.org.tasks;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.testng.annotations.Test;
+import ru.org.datasurce.IntegerDataSource;
 import ru.org.datasurce.StringDataSource;
 
 import java.util.Arrays;
@@ -17,7 +18,7 @@ public class TestTasksDataStreams {
 
     /**
      * 1. Убедитесь, что запрос первых пяти длинных слов не требует вызова метода
-            filter (), если найдено пятое длинное слово. С этой целью просто организуйте
+            filter(), если найдено пятое длинное слово. С этой целью просто организуйте
             протоколирование вызова каждого метода.
      */
     @Test
@@ -26,6 +27,7 @@ public class TestTasksDataStreams {
         int wordSize = 5;
         List<String> list = StringDataSource.get().getListString(size, wordSize);
         STREAMS.getFirstFiveBigWords(list, wordSize);
+
         /**
          * help! - смог реализовать вывод в конслоь, но реализоация не подтвержает утверждениеие задачи.
          */
@@ -33,7 +35,7 @@ public class TestTasksDataStreams {
 
     /**
      * 2. Определите разность во времени подсчета длинных слов с помощью методов
-            parallelStream () и stream ( ) . Вызовите метод System.currentTimeMillis ()
+            parallelStream() и stream() . Вызовите метод System.currentTimeMillis()
             до и после этих методов и выведите разность. Если у вас быстродействующий
             компьютер, выберите для подсчета длинных слов более длинный документ (например,
             роман "Война и мир").
@@ -54,34 +56,39 @@ public class TestTasksDataStreams {
     }
 
     /**
-     * 3. Допустим, что имеется массив int [] values = { 1, 4, 9, 16 }. Каков результат
-            вызова Stream.of ( values ) ? Как вместо этого получить поток данных типа int ?
+     * 3. Допустим, что имеется массив int[] values = { 1, 4, 9, 16 }. Каков результат
+            вызова Stream.of( values ) ? Как вместо этого получить поток данных типа int ?
      */
     @Test
     public void intStream(){
+        int size = 10;
+        int[] arrayInt = IntegerDataSource.get().getArrayInt(size);
+        Stream<Integer> stream = STREAMS.getIntStream(arrayInt);
+
         /**
          * Stream.of(values) - получил ошибку компилятора.
+         * 1. Получить: IntStream intStream = Arrays.stream(array);
+         * 2. Получить: Stream<Integer> stream = (Stream<Integer>) Arrays.stream(array);
          */
-        Stream<Integer> stream = STREAMS.getStreamIntOfList(100);
-        IntStream intStream = null;
     }
 
     /**
-     * 4. С помощью метода Stream, iterate () создайте бесконечный поток случайных
-            чисел, не вызывая метод Math, random (), а непосредственно реализуя линейный
+     * 4. С помощью метода Stream.iterate() создайте бесконечный поток случайных
+            чисел, не вызывая метод Math.random(), а непосредственно реализуя линейный
             конгруэнтный генератор. Такой генератор начинает действовать с числа, задаваемого
             выражением х0 = начальное значение, а затем производит случайные
             числа по формуле х,| + 1 = (а хп + с) % т, при соответствующих значениях а, с и
-            т. С этой целью реализуйте метод, принимающий параметры а, с, т и получающий
+            т. С этой целью реализуйте метод, принимающий параметры а, с, t и получающий
             поток данных Stream < Long > . Опробуйте его со следующими параметрами:
-            а = 25214903917, с = 11 и т = 2**.
+            а = 25214903917, с = 11 и t = 2^48.
      */
     @Test
     public void t4(){
-        int listSize = 10;
-        int wordSize = 10;
-        List<String> list = StringDataSource.get().getListString(listSize, wordSize);
-        LOGGER.info(list.toString());
+        long a = 25214903917L;
+        int c = 11;
+        int t = 0;
+        Stream<Long> stream = STREAMS.getLongStream(a, c, t);
+
     }
 
     /**
