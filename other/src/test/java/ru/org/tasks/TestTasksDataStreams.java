@@ -8,6 +8,7 @@ import ru.org.datasurce.StringDataSource;
 
 import java.util.Arrays;
 import java.util.List;
+import java.util.stream.Collectors;
 import java.util.stream.IntStream;
 import java.util.stream.Stream;
 
@@ -63,7 +64,7 @@ public class TestTasksDataStreams {
     public void intStream(){
         int size = 10;
         int[] arrayInt = IntegerDataSource.get().getArrayInt(size);
-        Stream<Integer> stream = STREAMS.getIntStream(arrayInt);
+        IntStream stream = STREAMS.getIntStream(arrayInt);
 
         /**
          * Stream.of(values) - получил ошибку компилятора.
@@ -83,24 +84,32 @@ public class TestTasksDataStreams {
             а = 25214903917, с = 11 и t = 2^48.
      */
     @Test
-    public void t4(){
+    public void generateRandomLongStream(){
         long a = 25214903917L;
         int c = 11;
-        int t = 0;
+        long t = (long) Math.pow(2,48);
         Stream<Long> stream = STREAMS.getLongStream(a, c, t);
 
+        int limit = 100;
+        List<Long> result = stream.limit(limit).collect(Collectors.toList());
+        LOGGER.info(result);
+
+        /**
+         * Числа получилсь случайные - вроде, но как мне кажется Random работает лучьше.
+         */
     }
 
     /**
-     * 5. Метод letters (), упоминавшийся в разделе 8.3, выглядит несколько неуклюже,
+     * 5. Метод letters(), упоминавшийся в разделе 8.3, выглядит несколько неуклюже,
             поскольку в нем сначала получается списочный массив, а затем он превращается
             в поток данных. Напишите другой, однострочный вариант этого
             метода, используя поток данных. Преобразуйте значения типа int в пределах
-            от 0 до s.length () - 1 с помощью подходящего лямбда-выражения.
+            от 0 до s.length() - 1 с помощью подходящего лямбда-выражения.
      */
     @Test
-    public void t5(){
-
+    public void SymbolicallyStringStream(){
+        String line = "Преобразовываем строку в поток символов";
+        Stream<String> stream = STREAMS.getSymbolicallyStringStream(line);
     }
 
     /**

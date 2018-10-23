@@ -3,24 +3,18 @@ package ru.org.tasks;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
-import javax.xml.crypto.Data;
-import java.nio.charset.StandardCharsets;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
-import java.util.Optional;
-import java.util.Random;
 import java.util.stream.IntStream;
 import java.util.stream.Stream;
 import java.util.stream.Collectors;
-import java.util.stream.Stream;
 
 public class TasksDataStreams {
     private static final Logger LOGGER = LogManager.getLogger(TasksDataStreams.class);
 
-    public Stream<Integer> getIntStream(int[] array) {
-        IntStream intStream = Arrays.stream(array);
-        return  (Stream<Integer>) Arrays.stream(array);
+    public IntStream getIntStream(int[] array) {
+        return  Arrays.stream(array);
     }
 
     public List<String> runFor(List<String> list) {
@@ -72,7 +66,12 @@ public class TasksDataStreams {
         LOGGER.info("Stop stream " + System.currentTimeMillis());
     }
 
-    public Stream<Long> getLongStream(long a, int c, int t){
-        return Stream.iterate(a,null);
+    public Stream<Long> getLongStream(long a, int c, long t){
+        return Stream.iterate(a, p -> p = (a * p + c) % t);
+    }
+
+    public Stream<String> getSymbolicallyStringStream(String line){
+        IntStream intStream = IntStream.range(0, line.length() - 1);
+     return null;
     }
 }
