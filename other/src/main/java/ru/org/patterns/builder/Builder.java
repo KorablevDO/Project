@@ -1,5 +1,9 @@
 package ru.org.patterns.builder;
 
+/**
+ * Паттерн Builder - строитель. Отвечает за сбор обьекта. Для паттерна реализован класс director который выполняет роль
+ * обертки для builder.
+ */
 public class Builder implements InterfaceBuilder {
     private Message value;
 
@@ -8,21 +12,18 @@ public class Builder implements InterfaceBuilder {
     }
 
     @Override
-    public InterfaceBuilder setValue1(String value) {
+    public void setValue1(String value) {
         this.value.addLine(value);
-        return this;
     }
 
     @Override
-    public InterfaceBuilder setValue2(String value) {
+    public void setValue2(String value) {
         this.value.addLine(value);
-        return this;
     }
 
     @Override
-    public InterfaceBuilder setValue3(String value) {
+    public void setValue3(String value) {
         this.value.addLine(value);
-        return this;
     }
 
     @Override

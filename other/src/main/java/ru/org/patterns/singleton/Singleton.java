@@ -45,4 +45,8 @@ public final class Singleton {
         }
         return instance;
     }
+
+    public String getValue(){
+        return this.value;
+    }
 }
