@@ -2,10 +2,13 @@ package ru.org.tasks;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
+import org.testng.Assert;
 import org.testng.annotations.Test;
+import ru.org.datasurce.GenerateDataFile;
 import ru.org.datasurce.IntegerDataSource;
 import ru.org.datasurce.StringDataSource;
 
+import java.io.IOException;
 import java.util.Arrays;
 import java.util.List;
 import java.util.stream.Collectors;
@@ -107,21 +110,40 @@ public class TestTasksDataStreams {
             от 0 до s.length() - 1 с помощью подходящего лямбда-выражения.
      */
     @Test
-    public void SymbolicallyStringStream(){
+    public void symbolicallyStringStream(){
         String line = "Преобразовываем строку в поток символов";
         Stream<String> stream = STREAMS.getSymbolicallyStringStream(line);
+        List<String> list = stream.collect(Collectors.toList());
+        LOGGER.info(list);
     }
 
     /**
-     * 6. Воспользуйтесь методом String.codePoints () для реализации метода, проверяющего,
+     * 6. Воспользуйтесь методом String.codePoints() для реализации метода, проверяющего,
             является ли символьная строка словом, состоящим только из букв.
-            (Подсказка: воспользуйтесь методом Character.isAlphabetic ().) Реализуйте
+            (Подсказка: воспользуйтесь методом Character.isAlphabetic().) Реализуйте
             тем же самым способом метод, проверяющий, является ли символьная строка
             достоверным в Java идентификатором.
      */
     @Test
-    public void t6(){
+    public void stringCheck(){
+        String line1 = "stream";
+        String line2 = "123456789";
 
+        Assert.assertTrue(STREAMS.wordLineTest(line1));
+        Assert.assertFalse(STREAMS.wordLineTest(line2));
+
+        String line3 = "_stream";
+        String line4 = "Stream1";
+        String line5 = "stream";
+        String line6 = "1stream";
+
+        Assert.assertTrue(STREAMS.checkStringIdentifier(line3));
+        Assert.assertTrue(STREAMS.checkStringIdentifier(line4));
+        Assert.assertFalse(STREAMS.checkStringIdentifier(line5));
+        Assert.assertFalse(STREAMS.checkStringIdentifier(line6));
+        /**
+         * checkStringIdentifier - реализация меня смущает, она работает но мне кажется что я что то упускаю.
+         */
     }
 
     /**
@@ -131,8 +153,24 @@ public class TestTasksDataStreams {
             из 10 наиболее часто употребляемых слов, игнорируя регистр букв.
      */
     @Test
-    public void t7(){
+    public void fileCheck() throws IOException {
+        String path = "src\\test\\resources\\DataPull.txt";
+        int size = 1000;
+        GenerateDataFile.get().generateDataFile(path, size);
 
+        int limit = 100;
+        List<String> result1 = STREAMS.getWordsOfFileWithElements(path, " ", limit);
+        LOGGER.info(result1);
+
+        int frequent = 10;
+        List<String> result2 = STREAMS.getFrequentlyUsedWordsFromFileWithElements(path, " ", frequent);
+        LOGGER.info(result2);
+
+        /**
+         * Необходимо модернизировать генератор данных
+         * 1. надо добавить генерацию слова + цифры
+         * 2. задать разделитель для элементов
+         */
     }
 
     /**

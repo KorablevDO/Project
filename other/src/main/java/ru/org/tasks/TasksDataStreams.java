@@ -3,6 +3,10 @@ package ru.org.tasks;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
+import java.io.IOException;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.nio.file.Paths;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
@@ -14,7 +18,7 @@ public class TasksDataStreams {
     private static final Logger LOGGER = LogManager.getLogger(TasksDataStreams.class);
 
     public IntStream getIntStream(int[] array) {
-        return  Arrays.stream(array);
+        return Arrays.stream(array);
     }
 
     public List<String> runFor(List<String> list) {
@@ -66,12 +70,46 @@ public class TasksDataStreams {
         LOGGER.info("Stop stream " + System.currentTimeMillis());
     }
 
-    public Stream<Long> getLongStream(long a, int c, long t){
+    public Stream<Long> getLongStream(long a, int c, long t) {
         return Stream.iterate(a, p -> p = (a * p + c) % t);
     }
 
-    public Stream<String> getSymbolicallyStringStream(String line){
-        IntStream intStream = IntStream.range(0, line.length() - 1);
-     return null;
+    public Stream<String> getSymbolicallyStringStream(String line) {
+        return IntStream.range(0, line.length() - 1).mapToObj(i -> line.substring(i, i + 1));
+    }
+
+    public Boolean wordLineTest(String line){
+        return line.codePoints().allMatch(i -> Character.isAlphabetic(i));
+    }
+
+    public Boolean checkStringIdentifier(String line){
+        int symbol = (int)'_';
+        boolean result1 = line.codePoints().skip(1).allMatch(i -> Character.isAlphabetic(i) || Character.isDigit(i));
+        boolean result2 = line.codePoints().limit(1).allMatch(i -> Character.isUpperCase(i) || i == symbol);
+        boolean result3 = line.codePoints().anyMatch(i -> Character.isWhitespace(i));
+        return result1  && result2 && !result3;
+    }
+
+    public List<String> getWordsOfFileWithElements(String file, String split, int size) throws IOException {
+        Stream<String> stream = getStream(file);
+        Stream<String> streamElements = split(stream, split);
+        Stream<String> result = streamElements.filter(s -> wordLineTest(s));
+        return result.limit(size).collect(Collectors.toList());
+    }
+
+    private Stream<String> getStream(String file) throws IOException {
+        Path path = Paths.get(file);
+        return Files.lines(path);
+    }
+
+    private Stream<String> split(Stream<String> stream, String split){
+        return stream.flatMap(s -> Arrays.asList(s.split(split)).stream());
+    }
+
+    public List<String> getFrequentlyUsedWordsFromFileWithElements(String file, String split, int size) throws IOException {
+        Stream<String> stream = getStream(file);
+        Stream<String> streamElements = split(stream, split);
+
+        return streamElements.sorted().collect(Collectors.toList());
     }
 }
