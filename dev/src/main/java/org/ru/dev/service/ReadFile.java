@@ -1,26 +1,30 @@
 package org.ru.dev.service;
 
 import java.io.*;
-import java.util.List;
+import java.util.Deque;
 
 public class ReadFile<T> {
-    private List<T> list;
+    private boolean limit = false;
+    private Deque<T> deque;
     private char separator = ',';
 
-    public void setList(List<T> list){
-        this.list = list;
+    public void setDeque(Deque<T> deque){
+        this.deque = deque;
     }
 
     public void read(File file) throws IOException {
         InputStreamReader reader = new InputStreamReader(new FileInputStream(file));
         int data;
         StringBuffer buffer = new StringBuffer();
+
         while ((data = reader.read()) != 0){
             char c = (char) data;
-            buffer.append(c);
 
-            if(c == this.separator){
-                this.list.add((T) buffer.toString());
+            if(c != this.separator){
+                buffer.append(c);
+            } else {
+                this.deque.add((T) buffer.toString());
+                buffer.setLength(0);
             }
         }
     }

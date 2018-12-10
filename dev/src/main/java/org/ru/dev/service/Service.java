@@ -1,19 +1,15 @@
 package org.ru.dev.service;
 
+import java.io.File;
+import java.util.*;
+
 public class Service {
     private static String directory = "dev/src/main/resources/";
     private static int i;
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws Exception {
         init();
         action();
-
-        while (true){
-            if (true){
-                break;
-            }
-        }
-
         end();
 
     }
@@ -23,11 +19,23 @@ public class Service {
         i = 0;
     }
 
-    private static void action(){
-        while (true){
-            i++;
-            System.out.println(i);
+    private static void action() throws Exception {
+        File file = new File(directory);
+        File[] files = file.listFiles();
+        for(File nextFile : files){
+            if(!nextFile.exists()){
+                throw new Exception();
+            }
         }
+
+        ReadFile<Integer> readFile = new ReadFile<>();
+        Deque<Integer> deque = new ArrayDeque<>();
+        readFile.setDeque(deque);
+        for(File nextFile : files){
+            readFile.read(nextFile);
+        }
+
+        System.out.println();
     }
 
     private static void end(){

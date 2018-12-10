@@ -4,8 +4,8 @@ import org.ru.dev.service.ReadFile;
 
 import java.io.File;
 import java.io.IOException;
-import java.util.LinkedList;
-import java.util.List;
+import java.util.ArrayDeque;
+import java.util.Deque;
 
 public class ReadFileTest {
 
@@ -13,19 +13,19 @@ public class ReadFileTest {
         String path = "dev/src/main/resources/dataPull0.txt";
         File file = new File(path);
         ReadFile<Integer> reader = new ReadFile<Integer>();
-        List<Integer> list = new LinkedList<Integer>();
-        reader.setList(list);
+        Deque<Integer> deque = new ArrayDeque<>();
+        reader.setDeque(deque);
         reader.read(file);
-        System.out.println(list.toString());
+        System.out.println(deque.toString());
     }
 
     public void readFileString() throws IOException {
         String path = "dev/src/main/resources/dataPull0.txt";
         File file = new File(path);
         ReadFile<String> reader = new ReadFile<String>();
-        List<String> list = new LinkedList<String>();
-        reader.setList(list);
+        Deque<String> deque = new ArrayDeque<>();
+        reader.setDeque(deque);
         reader.read(file);
-        System.out.println(list.toString());
+        System.out.println(deque.toString());
     }
 }
