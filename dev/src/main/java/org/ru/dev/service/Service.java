@@ -28,11 +28,9 @@ public class Service {
             }
         }
 
-        ReadFile<Integer> readFile = new ReadFile<>();
-        Deque<Integer> deque = new ArrayDeque<>();
-        readFile.setDeque(deque);
+
         for(File nextFile : files){
-            readFile.read(nextFile);
+
         }
 
         System.out.println();
@@ -54,6 +52,10 @@ public class Service {
  *  1. Запускается сервис
  *  2. Инициализируется поток на чтение всех файлов которые приходят в указанную директорию
  *  3. Инициализируется поток который обрабатывает данные которые были вычитаны потоком на чтение
+ *
+ *  Задачи:
+ *  1. Реализовать буфур, для передачи сообщений между потокм на чтении и потоком на исполнение
+ *
  *
  *  Технологии;
  *  Java SE 8
