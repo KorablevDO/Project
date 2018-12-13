@@ -10,7 +10,7 @@ import java.util.Random;
 public class GenerateFiles {
     private static Random random = new Random();
     private static String path = "dev/src/main/resources/";
-    private static int size = 100000;
+    private static int size = 100;
     private static int lineSize = 100;
     private static int number = 5;
 
