@@ -12,7 +12,7 @@ public class GenerateFiles {
     private static String path = "dev/src/main/resources/";
     private static int size = 100;
     private static int lineSize = 100;
-    private static int number = 5;
+    private static int number = 1;
 
     public static void main(String[] args) throws IOException {
         for(int i = 0; i < number; i++){

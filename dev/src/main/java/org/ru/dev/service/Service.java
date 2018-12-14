@@ -3,7 +3,7 @@ package org.ru.dev.service;
 import java.io.File;
 
 public class Service {
-    private static String directory = "dev/src/main/resources/";
+    private static String directory = "dev/src/main/resources/dataPull0.txt";
     private static int i;
 
     public static void main(String[] args) throws Exception {
@@ -19,20 +19,13 @@ public class Service {
     }
 
     private static void action() throws Exception {
-        File file = new File(directory);
-        File[] files = file.listFiles();
-        for(File nextFile : files){
-            if(!nextFile.exists()){
-                throw new Exception();
-            }
+        Provider provider = new Provider();
+        provider.search(directory);
+        String number;
+        while ((number = provider.next()) != null){
+            int i = Integer.valueOf(number);
+            System.out.println(i*2);
         }
-
-        ReadFile readFile = new ReadFile();
-        for(File nextFile : files){
-            readFile.read(nextFile);
-        }
-
-        System.out.println();
     }
 
     private static void end(){

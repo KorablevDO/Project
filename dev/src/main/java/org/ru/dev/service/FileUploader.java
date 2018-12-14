@@ -24,9 +24,9 @@ public class FileUploader {
         this.stream.close();
     }
 
-    public int next() throws IOException {
+    public String next() throws IOException {
         int data;
-        String result = "";
+        String result = null;
         while ((data = this.stream.read()) != 0){
             char c = (char) data;
 
@@ -35,8 +35,9 @@ public class FileUploader {
             } else {
                  result = buffer.toString();
                 this.buffer.setLength(0);
+                return result;
             }
         }
-        return Integer.valueOf(result);
+        return null;
     }
 }
