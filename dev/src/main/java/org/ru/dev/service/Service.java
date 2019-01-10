@@ -45,14 +45,6 @@ public class Service {
  * 2. Реализовать класс FileUploader - отвечающй за выгрузку данных из файла
  * 3.
  *
- *
- *
- *
- *
- *
- *
- *
- *
  *  Технологии;
  *  Java SE 8
  *  Паттерны программирования
@@ -67,7 +59,4 @@ public class Service {
  * https://habr.com/post/247647/
  *SLF4J  -?
  * https://proglib.io/p/java-coding-channels/
- *
- *
- *
  */
