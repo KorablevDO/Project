@@ -4,6 +4,11 @@
     <option name="originalFiles">
       <list>
         <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/dev/Client/pom.xml" />
+        <option value="$PROJECT_DIR$/dev/Server/pom.xml" />
+        <option value="$PROJECT_DIR$/dev/TaskPlanner/pom.xml" />
+        <option value="$PROJECT_DIR$/dev/pom.xml" />
+        <option value="$PROJECT_DIR$/library/pom.xml" />
       </list>
     </option>
     <option name="ignoredFiles">

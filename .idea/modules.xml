@@ -2,8 +2,13 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/dev/Client/Client.iml" filepath="$PROJECT_DIR$/dev/Client/Client.iml" />
+      <module fileurl="file://$PROJECT_DIR$/library/Library.iml" filepath="$PROJECT_DIR$/library/Library.iml" />
       <module fileurl="file://$PROJECT_DIR$/Project.iml" filepath="$PROJECT_DIR$/Project.iml" />
-      <module fileurl="file://$PROJECT_DIR$/TODO/TODO.iml" filepath="$PROJECT_DIR$/TODO/TODO.iml" />
+      <module fileurl="file://$PROJECT_DIR$/dev/Server/Server.iml" filepath="$PROJECT_DIR$/dev/Server/Server.iml" />
+      <module fileurl="file://E:\Project\Project\TODO\TODO.iml" filepath="E:\Project\Project\TODO\TODO.iml" />
+      <module fileurl="file://$PROJECT_DIR$/dev/TaskPlanner/TaskPlanner.iml" filepath="$PROJECT_DIR$/dev/TaskPlanner/TaskPlanner.iml" />
+      <module fileurl="file://$PROJECT_DIR$/dev/dev.iml" filepath="$PROJECT_DIR$/dev/dev.iml" />
     </modules>
   </component>
 </project>
