@@ -1,45 +1,45 @@
 <?xml version="0.0" encoding="utf-8"?>
 <Plan>
     <Direction>
-        <Basic>Нагрузочное тестирование</Basic>
-        <UnderDirection>Разработка Back-End</UnderDirection>
-        <UnderDirection>Автоматизация</UnderDirection>
+        <purpose>Java developer</purpose>
+        <purpose>Разработка Back-End</purpose>
         <Strategy>
-            Уходим в отры, цель уйти в разработку.
+            Пройтись по вопросам для собеседования как отправная точка для выявления пробелов. Чтени литераутвы и выполнение
+            заданий. Реализация проекта для партфолио.
         </Strategy>
-        <Position>Инженер по нагрзочному тестированию</Position>
     </Direction>
     <Competence>
-        <Name status = "false">Автоматизация проводимых работ</Name>
-        <Name status = "false">Java(junior) разработчик</Name>
-        <Name status = "false">Проведение нагрузочного тестирования</Name>
-        <Name status = "false">Анализ данных</Name>
-        <Name status = "false">Работа с базами данных</Name>
-        <Name status = "false">Многопоточное программирование</Name>
-        <Name status = "false">Сетевое програмирование</Name>
+        <Name>Java(junior) разработчик</Name>
+        <Name>Анализ данных</Name>
+        <Name>Работа с базами данных</Name>
+        <Name>Многопоточное программирование</Name>
+        <Name>Сетевое програмирование</Name>
     </Competence>
     <Skills>
-        <Skill status = "false">Работа со строками</Skill>
-        <Skill status = "false">Работа с файлами</Skill>
-        <Skill status = "false">Поиск, запись, изменение, удаление данных в базе данных</Skill>
-        <Skill status = "false">Передача сообщений через MQ</Skill>
-        <Skill status = "false">Java - анатации</Skill>
-        <Skill status = "false">Java - kafka</Skill>
-        <Skill status = "false">Git</Skill>
-        <Skill status = "false">Intellij IDEA</Skill>
-        <Skill status = "false">Анализ документации</Skill>
-        <Skill status = "false">Навык донесение информции до слушателя</Skill>
-        <Skill status = "false">Maven</Skill>
-        <Skill status = "false">Алгоритмы</Skill>
-        <Skill status = "false">Структуры данных</Skill>
-        <Skill status = "false">ООП</Skill>
+        <skill>Работа со строками</skill>
+        <skill>Работа с файлами</skill>
+        <skill>Поиск, запись, изменение, удаление данных в базе данных</skill>
+        <skill>Передача сообщений через MQ</skill>
+        <skill>Java - анатации</skill>
+        <skill>kafka</skill>
+        <skill>Git(консоль)</skill>
+        <skill>Intellij IDEA</skill>
+        <skill>Анализ документации</skill>
+        <skill>Навык донесение информции до слушателя</skill>
+        <skill>Maven</skill>
+        <skill>Gradle</skill>
+        <skill>Алгоритмы</skill>
+        <skill>Структуры данных</skill>
+        <skill>ООП</skill>
+        <skill>spring framework</skill>
+        <skill>SQL</skill>
     </Skills>
     <Books>
         <Book status = "true" percent = "100">Савин - Тестирование DOT COM</Book>
         <Book status = "true" percent = "100">Стив Макконнелл - Совершенный код</Book>
-        <Book status = "true" percent = "0">Хорстманн К. - Java SE 8. Базовый курс (2015)</Book>
+        <Book status = "false" percent = "20">Хорстманн К. - Java SE 8. Базовый курс (2015)</Book>
     </Books>
     <Sites>
-        <Site name = "">https://github.com/KorablevDO</Site>
+        <Site name = "project">https://github.com/KorablevDO</Site>
     </Sites>
 </Plan>
