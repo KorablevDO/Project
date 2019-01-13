@@ -8,21 +8,22 @@
         <outputRelativeToContentRoot value="true" />
         <module name="Client" />
         <module name="dev" />
+        <module name="lab" />
+        <module name="lib" />
         <module name="Library" />
-        <module name="Project" />
+        <module name="library" />
+        <module name="other" />
         <module name="Server" />
         <module name="TaskPlanner" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="Client" target="1.5" />
-      <module name="dev" target="1.8" />
-      <module name="Library" target="1.8" />
-      <module name="other" target="1.8" />
-      <module name="Project" target="1.8" />
+      <module name="dev" target="1.5" />
+      <module name="lab" target="1.8" />
+      <module name="lib" target="1.8" />
       <module name="Server" target="1.5" />
-      <module name="TaskPlanner" target="1.8" />
-      <module name="TODO" target="1.5" />
+      <module name="TaskPlanner" target="1.5" />
     </bytecodeTargetLevel>
   </component>
 </project>
