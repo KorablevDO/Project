@@ -2,7 +2,7 @@ package ru.test.lab.patterns;
 
 import org.testng.Assert;
 import org.testng.annotations.Test;
-import ru.test.lab.patterns.singleton.Singleton;
+import ru.test.lab.patterns.fencing.singleton.Singleton;
 
 public class TestSingleton {
 

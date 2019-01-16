@@ -1,4 +1,4 @@
-package ru.test.lab.patterns.singleton;
+package ru.test.lab.patterns.fencing.singleton;
 
 /**
  * Класс реализован по принцепу паттерна singleton - одиночка ограничиват класс наличием только одного экземпляром в

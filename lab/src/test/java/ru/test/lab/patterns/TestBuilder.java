@@ -1,7 +1,7 @@
 package ru.test.lab.patterns;
 
 import org.testng.annotations.Test;
-import ru.test.lab.patterns.builder.Director;
+import ru.test.lab.patterns.fencing.builder.Director;
 
 public class TestBuilder {
 

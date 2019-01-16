@@ -1,4 +1,4 @@
-package ru.test.lab.patterns.builder;
+package ru.test.lab.patterns.fencing.builder;
 
 public interface InterfaceBuilder {
     public void setValue1(String value);

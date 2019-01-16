@@ -1,4 +1,4 @@
-package ru.test.lab.patterns.builder;
+package ru.test.lab.patterns.fencing.builder;
 
 /**
  * Паттерн Builder - строитель. Отвечает за сбор обьекта. Для паттерна реализован класс director который выполняет роль

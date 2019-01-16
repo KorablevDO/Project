@@ -1,4 +1,4 @@
-package ru.test.lab.patterns.builder;
+package ru.test.lab.patterns.fencing.builder;
 
 public class Message {
     private String line;
