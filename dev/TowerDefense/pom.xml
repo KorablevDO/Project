@@ -5,8 +5,16 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>TowerDefense</groupId>
-    <artifactId>tower_defense</artifactId>
-    <version>1.0-SNAPSHOT</version>
+    <artifactId>org.dev.game.td</artifactId>
+    <version>0.0.0</version>
 
+    <dependencies>
+        <dependency>
+            <groupId>org.testng</groupId>
+            <artifactId>testng</artifactId>
+            <version>6.14.3</version>
+            <scope>test</scope>
+        </dependency>
+    </dependencies>
 
 </project>
