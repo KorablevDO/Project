@@ -4,14 +4,13 @@
     <option name="originalFiles">
       <list>
         <option value="$PROJECT_DIR$/pom.xml" />
-        <option value="$PROJECT_DIR$/dev/Client/pom.xml" />
-        <option value="$PROJECT_DIR$/dev/Server/pom.xml" />
-        <option value="$PROJECT_DIR$/dev/TaskPlanner/pom.xml" />
-        <option value="$PROJECT_DIR$/dev/pom.xml" />
         <option value="$PROJECT_DIR$/library/pom.xml" />
         <option value="$PROJECT_DIR$/other/pom.xml" />
         <option value="$PROJECT_DIR$/lib/pom.xml" />
         <option value="$PROJECT_DIR$/lab/pom.xml" />
+        <option value="$PROJECT_DIR$/tower_defense/pom.xml" />
+        <option value="$PROJECT_DIR$/dev/pom.xml" />
+        <option value="$PROJECT_DIR$/dev/TowerDefense/pom.xml" />
       </list>
     </option>
     <option name="ignoredFiles">

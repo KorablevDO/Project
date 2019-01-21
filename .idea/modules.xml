@@ -2,10 +2,8 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/dev/Client/Client.iml" filepath="$PROJECT_DIR$/dev/Client/Client.iml" />
-      <module fileurl="file://$PROJECT_DIR$/dev/Server/Server.iml" filepath="$PROJECT_DIR$/dev/Server/Server.iml" />
       <module fileurl="file://E:\Project\Project\TODO\TODO.iml" filepath="E:\Project\Project\TODO\TODO.iml" />
-      <module fileurl="file://$PROJECT_DIR$/dev/TaskPlanner/TaskPlanner.iml" filepath="$PROJECT_DIR$/dev/TaskPlanner/TaskPlanner.iml" />
+      <module fileurl="file://$PROJECT_DIR$/dev/TowerDefense/TowerDefense.iml" filepath="$PROJECT_DIR$/dev/TowerDefense/TowerDefense.iml" />
       <module fileurl="file://$PROJECT_DIR$/dev/dev.iml" filepath="$PROJECT_DIR$/dev/dev.iml" />
       <module fileurl="file://$PROJECT_DIR$/lab/lab.iml" filepath="$PROJECT_DIR$/lab/lab.iml" />
       <module fileurl="file://$PROJECT_DIR$/lib/lib.iml" filepath="$PROJECT_DIR$/lib/lib.iml" />
