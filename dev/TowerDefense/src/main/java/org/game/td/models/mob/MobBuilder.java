@@ -26,7 +26,7 @@ public class MobBuilder {
         return this;
     }
 
-    public MobImpl build(){
+    public Mob build(){
         MobImpl mob = new MobImpl();
         mob.setName(this.name);
         mob.setType(this.type);

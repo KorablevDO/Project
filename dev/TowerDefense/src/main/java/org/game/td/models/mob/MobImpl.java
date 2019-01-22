@@ -25,16 +25,16 @@ public class MobImpl implements Mob {
     }
 
     private int damageCalculation(int hitPoints, int defense, int damage){
-        int blocked = getBlocked(defense, damage);
-        int result = hitPoints - (damage - blocked);
+        int result;
+        if(defense > 0){
+            result = hitPoints - ( damage / 5);
+        } else {
+            result = hitPoints - damage;
+        }
+
         return result;
     }
 
-    private int getBlocked(int defense, int damage){
-        int result = damage - defense / 5;
-
-        return result;
-    }
 
     private int damageDefenseCalculation(int defense, int damage){
         int result = 0;
