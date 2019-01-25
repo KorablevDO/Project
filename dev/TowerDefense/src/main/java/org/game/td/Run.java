@@ -1,11 +1,11 @@
 package org.game.td;
 
-import org.game.td.models.mob.Mob;
-import org.game.td.models.mob.MobBuilder;
-import org.game.td.models.mob.MobType;
-import org.game.td.models.tower.Tower;
-import org.game.td.models.tower.TowerBuilder;
-import org.game.td.models.tower.TowerType;
+import org.game.td.mob.Mob;
+import org.game.td.mob.MobBuilder;
+import org.game.td.mob.MobType;
+import org.game.td.tower.Tower;
+import org.game.td.tower.TowerBuilder;
+import org.game.td.tower.TowerType;
 
 public class Run {
     public static void main(String[] args) {
@@ -22,14 +22,6 @@ public class Run {
                 .setType(TowerType.BASE);
         Tower tower = towerBuilder.build();
         System.out.println(tower);
-
-        int[][] location = {{0,0},{0,0}};
-
-        System.out.println(location.toString());
-
-
-
-
 
         do {
             mob.setDamage(tower.getDamage());

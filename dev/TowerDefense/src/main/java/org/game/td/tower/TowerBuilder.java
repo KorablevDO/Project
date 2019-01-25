@@ -1,4 +1,4 @@
-package org.game.td.models.tower;
+package org.game.td.tower;
 
 public class TowerBuilder {
     private int damage;

@@ -1,4 +1,4 @@
-package org.game.td.models.mob;
+package org.game.td.mob;
 
 public enum MobType {
     SOLDIER
