@@ -140,7 +140,7 @@ public class TestTasksDataStreams {
      */
     @Test
     public void fileCheck() throws IOException {
-        String path = "src\\test\\resources\\DataPull.txt";
+        String path = "src\\test\\resources\\DataPull.dat";
         int size = 1000;
         FileRandomDataGenerator.createDataFile(path, size);
 

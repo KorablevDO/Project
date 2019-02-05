@@ -104,7 +104,7 @@ public class TasksDataStreams {
     public List<String> getFrequentlyUsedWordsFromFileWithElements(String file, String split, int size) throws IOException {
         Stream<String> stream = getStream(file);
         Stream<String> streamElements = split(stream, split);
-
+    //TODO !!!!
         return streamElements.sorted().collect(Collectors.toList());
     }
 }

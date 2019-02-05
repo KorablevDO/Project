@@ -5,7 +5,8 @@ import java.util.Map;
 
 /**
  * Вопрос: Как использовать объект в качестве ключа в Map
- * Статус: Требуется дополнительные изыскания.
+ * Статус: Для корретной работы надо переопределить методы hashCode() и equals(), чтобы код мог правлеьно сранить объекты
+ * по ключу.
  */
 public class ObjectAsKey {
 
@@ -19,4 +20,13 @@ public class ObjectAsKey {
 
 class Key{
 
+    @Override
+    public int hashCode() {
+        return super.hashCode();
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        return super.equals(obj);
+    }
 }
