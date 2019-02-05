@@ -20,8 +20,12 @@ public class TaskPlanner {
 
     private static void init(){
         System.out.println("Init");
+        /**
+         * TODO Вопрос по хранилищу актуальных задач. Необходимо продумать вопрос с хранилищем.
+         */
         ProviderTasksOfFile providerTasksOfFile = new ProviderTasksOfFile(path1);
         List<Task> list = providerTasksOfFile.importTasks();
+
 
         for (Task task1 : list){
             System.out.println(task1);
