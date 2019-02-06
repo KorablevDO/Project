@@ -18,4 +18,8 @@ public class Notifications {
     public JPanel getRootPanel(){
         return this.rootPanel;
     }
+
+    public JLabel getText() {
+        return text;
+    }
 }

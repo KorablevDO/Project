@@ -32,14 +32,8 @@ public class ServiceTaskPlanner implements Runnable {
         StoreTaskInFile store = new StoreTaskInFile(this.path);
         store.saveTask(task);
 
-//        try {
-//            URL url = new URL("http://localhost:8080/wss/hello?wsdl");
-//            QName qName = new QName("http://userinterface.planner.task.org/", "UserInterfaceWebServiceImplService");
-//            Service service = Service.create(url, qName);
-//            UserInterfaceWebService webService = service.getPort(UserInterfaceWebService.class);
-//            System.out.println(webService.getHello(" LoL "));
-//        } catch (MalformedURLException e) {
-//            e.printStackTrace();
-//        }
+
+
+
     }
 }
