@@ -13,7 +13,7 @@ public class Project {
 
     public boolean hasCyclicDependencies() {
         for(Package aPackage : this.packages){
-        //TODO
+        //TODO обход графа!
         }
         return false;
     }
