@@ -2,6 +2,7 @@ package org.task.planner.userinterface.form;
 
 import org.task.planner.service.ServiceTaskPlanner;
 import org.task.planner.task.Task;
+import org.task.planner.task.TaskBuffer;
 import org.task.planner.task.TaskBuilder;
 
 import javax.swing.*;
@@ -16,7 +17,7 @@ public class UserInterfaceForm {
     private JButton addTaskButton;
     private JTextField textFieldName;
     private JTextField textFieldText;
-    private ServiceTaskPlanner taskPlanner;
+    private TaskBuffer buffer;
 
     public UserInterfaceForm() {
         addTaskButton.addActionListener(new ActionListener() {
@@ -29,7 +30,7 @@ public class UserInterfaceForm {
                         .setName(name)
                         .setDescription(text)
                         .build();
-                System.out.println(task);
+                buffer.addTask(task);
             }
         });
     }
@@ -48,5 +49,9 @@ public class UserInterfaceForm {
 
     public JTextField getTextFieldText() {
         return textFieldText;
+    }
+
+    public void setBuffer(TaskBuffer buffer) {
+        this.buffer = buffer;
     }
 }

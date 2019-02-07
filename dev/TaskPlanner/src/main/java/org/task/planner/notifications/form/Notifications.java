@@ -1,4 +1,4 @@
-package org.task.planner.notifications;
+package org.task.planner.notifications.form;
 
 import javax.swing.*;
 import java.awt.event.ComponentAdapter;
