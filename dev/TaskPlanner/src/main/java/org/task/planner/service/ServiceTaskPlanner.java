@@ -30,21 +30,26 @@ public class ServiceTaskPlanner implements Runnable {
 
         JLabel label = gui.getText();
         int i = 0;
-        int lenght = buffer.lenght();
+        int size = buffer.lenght();
         while (true) {
-            Task task = buffer.get(i);
-            label.setText(task.toString());
-            try {
-                Thread.sleep(2000);
-            } catch (InterruptedException e) {
-                e.printStackTrace();
-            }
+            if((buffer != null) && (size > 0)) {
+                Task task = buffer.get(i);
+                label.setText(task.toString());
+                try {
+                    Thread.sleep(2000);
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
+                }
 
-            if((i + 1) == lenght){
-                i = 0;
-                lenght = buffer.lenght();
+                if ((i + 1) == size) {
+                    i = 0;
+                    size = buffer.lenght();
+                } else {
+                    ++i;
+                }
             } else {
-                ++i;
+                label.setText("null");
+                size = buffer.lenght();
             }
         }
 
