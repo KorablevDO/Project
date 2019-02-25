@@ -9,18 +9,16 @@
         </Strategy>
     </Direction>
     <Competence>
-        <Name>Java(junior) разработчик</Name>
-        <Name>Анализ данных</Name>
-        <Name>Работа с базами данных</Name>
-        <Name>Многопоточное программирование</Name>
-        <Name>Сетевое програмирование</Name>
+        <name>Java(junior) разработчик</name>
+        <name>Анализ данных</name>
+        <name>Работа с базами данных</name>
+        <name>Многопоточное программирование</name>
+        <name>Сетевое програмирование</name>
     </Competence>
     <Skills>
-        <skill>Работа со строками</skill>
-        <skill>Работа с файлами</skill>
-        <skill>Поиск, запись, изменение, удаление данных в базе данных</skill>
+        <skill>Java 8</skill>
+        <skill>JDBS</skill>
         <skill>Передача сообщений через MQ</skill>
-        <skill>Java - анатации</skill>
         <skill>kafka</skill>
         <skill>Git(консоль)</skill>
         <skill>Intellij IDEA</skill>
@@ -35,11 +33,32 @@
         <skill>SQL</skill>
     </Skills>
     <Books>
-        <Book status = "true" percent = "100">Савин - Тестирование DOT COM</Book>
-        <Book status = "true" percent = "100">Стив Макконнелл - Совершенный код</Book>
-        <Book status = "false" percent = "20">Хорстманн К. - Java SE 8. Базовый курс (2015)</Book>
+        <book status = "true" percent = "100">Савин - Тестирование DOT COM</book>
+        <book status = "true" percent = "100">Стив Макконнелл - Совершенный код</book>
+        <book status = "true" percent = "1000">Хорстманн К. - Java SE 8. Базовый курс (2015)</book>
+        <book></book>
     </Books>
-    <Sites>
-        <Site name = "project">https://github.com/KorablevDO</Site>
-    </Sites>
+    <git>https://github.com/KorablevDO</git>
+    <Interview>
+        <hh>https://hh.ru/resume/3536c50eff05efb7860039ed1f6b46766f555a</hh>
+        <Questions>
+            <questions>Стек технологий на проекте</questions>
+            <questions>Предметная область</questions>
+            <questions>Потенциальные задачи</questions>
+            <questions>Финансовое предложение</questions>
+        </Questions>
+        <Back>
+            <in>SQL</in>
+            <in>Продемонстрировать заинтересованность быть програмистом</in>
+            <in>Продемонстрировать прикладываемы усиления</in>
+            <in>Анализ технического вызова</in>
+            <in>Не говорить "я не делал","я не знаю"</in>
+            <in>Подбор структуры данных под задачу</in>
+            <in>Выделить свои сильные стороны</in>
+        </Back>
+        <Prepare>
+            <in>Прочитать про компанию</in>
+            <in>Повторить проблемные точки</in>
+        </Prepare>
+    </Interview>
 </Plan>

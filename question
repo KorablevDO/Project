@@ -2,9 +2,11 @@
 Шаблон Объект Значение - ?
 Понимание принципов REST
 SOLID
-
 Spring framework
-
 https://j-born.com/page?_openstat=ZGlyZWN0LnlhbmRleC5ydTszNjUwMzczMTs2ODk4MjYwMDMxO2dhbWVyLW1vZHMucnU6Z3VhcmFudGVl&yclid=59387067347795104
-
 volatile
+hashcode/hashtable
+hash
+Скорость работы алгоритмов вставки и чтения сообщений в коллекциях.
+Сложность алгоритмов
+Как запретить редактирование списков.
