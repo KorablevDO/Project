@@ -7,4 +7,10 @@ public class Clazz {
 //https://www.ibm.com/developerworks/ru/library/j-5things13/index.html
     ///https://www.youtube.com/watch?v=LJjIaCKuzoc
     //https://www.javatpoint.com/html-button-tag
+    // Интерфейс
+    // Заглушка для kafka
+    // Генерация протокола
+    // Анализ результатов
+    // Парсер логов
+    // работа с базой данных
 }
