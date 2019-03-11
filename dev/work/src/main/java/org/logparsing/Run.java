@@ -1,5 +1,6 @@
 package org.logparsing;
 
+import java.util.Collections;
 import java.util.List;
 
 /**
@@ -10,5 +11,6 @@ public class Run {
     public static void main(String[] args) {
         LogParsing parsing = new LogParsing(new ParsingStackTrace());
         List<String> result = parsing.disassemble();
+        Collections.unmodifiableList(result);
     }
 }
