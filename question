@@ -32,6 +32,7 @@ https://www.youtube.com/watch?v=hf0AQcHn5Jg
 
 bean Mbean custodean jmx-?
 https://topjava.ru/blog/stack-and-heap-in-java
+https://tproger.ru/blogs/jvm-insides/ - линковка 
 
 //
 Полная обертка для учебного приложения
@@ -43,3 +44,25 @@ https://topjava.ru/blog/stack-and-heap-in-java
 6. Проект: homework
 7. Работа с репозиторием только через консоль.
 8. Проверка на утечку памяти.
+
+https://docs.oracle.com/javase/tutorial/jmx/mbeans/standard.html
+http://java-course.ru/articles/jmx/
+https://refaq.ru/voprosy/predikat_v_java
+
+
+java.lang.String Возможно, изменение в String — одно из самых важных в API JDK 11. Здесь есть несколько полезных новых методов.
+
+    boolean isBlank (): возвращает true, если строка пуста или содержит только пробелы, иначе false.
+
+    Stream lines(): возвращает поток строк, извлеченных из этой строки, разделенных терминаторами строк.
+
+    String repeat (int): возвращает строку, значение которой представляет собой конкатенацию этой строки, повторяющуюся int раз.
+
+    String strip (): Возвращает строку, из которой удалены все пробелы, которые находятся до первого символа, не являющегося пробелом, или после последнего.
+
+    String stripLeading (): Возвращает строку, из которой удалены все пробелы, которые находятся до первого символа, не являющегося пробелом.
+
+    String stripTrainling (): Возвращает строку, из которой удалены все пробелы, которые находятся после последнего символа, не являющегося пробелом.
+
+https://sysout.ru/modifikatsiya-bajt-koda-s-pomoshhyu-instrumentation/
+https://sysout.ru/obrabotka-annotatsij-na-urovne-ishodnikov/
